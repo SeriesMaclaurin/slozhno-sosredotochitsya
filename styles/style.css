@@ -4,12 +4,18 @@
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 23.4px;
+  background-color: #fff1f7; /* Фолбек цвет для светлой темы */
   background-image: var(--backgroung-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
+@media (prefers-color-scheme: dark) {
+  .page {
+    background-color: #000028; /* Фолбек цвет для тёмной темы */
+  }
+}
 /*Шапка*/
 
 .header {
@@ -130,8 +136,6 @@
 }
 
 .header__text {
-  max-inline-size: 491px;
-  max-block-size: 71px;
   justify-self: end;
   align-self: center;
 }
@@ -173,7 +177,7 @@
 
 /*Первая секция с вопросами*/
 
-.question__section__one {
+.question__section__attention {
   display: grid;
   grid-template-columns: 34% 66%;
   padding-block-start: 60px;
@@ -192,29 +196,29 @@
 
 /*Вторая секция с вопросами*/
 
-.question__section-two {
+.question__section__concentration {
   padding-block-start: 80px;
   padding-block-end: 80px;
   margin: 0 20px;
 }
 
-.question__section-answer-two-container {
+.question__section__answer__concentration__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding-block-start: 20px;
 }
-.question__section-title-two {
+.question__section__title__concentration {
   max-inline-size: 315px;
 }
 
-.question__section-answer-title-two {
+.question__section-answer__title__concentration {
   margin-block-end: 10px;
 }
 
 /*Третья секция с вопросами*/
 
-.question__section__fhree {
+.question__section__goldfish {
   display: grid;
   grid-template-columns: 34% 66%;
   padding-block-end: 80px;
@@ -225,12 +229,12 @@
   font-weight: 400;
 }
 
-.question__section-answer-fhree {
+.question__section__answer__goldfish {
   display: grid;
   gap: 20px;
 }
 
-.question__section-answer-text-fhree {
+.question__section__answer__goldfish__text {
   padding-block-start: 10px;
 }
 
@@ -284,6 +288,7 @@
 
 .footer {
   min-block-size: 100vh;
+  min-height: 668px;
   padding: 20px;
   position: relative;
   display: flex;
@@ -324,25 +329,25 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
-  .question__section__one {
+  .question__section__attention {
 
     grid-template-columns: 33% 67%;
     gap: 20px;
     padding-inline-end:20px;
   }
 
-  .question__section-answer-two-container {
+  .question__section__answer__concentration__container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-block-start: 20px;
   }
 
-  .question__section-title-two {
+  .question__section__title__concentration {
     max-inline-size: 236px;
   }
   
-  .question__section__fhree {
+  .question__section__goldfish {
     display: grid;
     grid-template-columns: 35% 65%;
     padding-block-end: 80px;
@@ -372,7 +377,7 @@
   max-block-size: 117px;
 }  
 
-.question__section__one {
+.question__section__attention {
   margin: 0px 10px;
   padding: 40px 0 0 0;
   display: flex;
@@ -380,23 +385,23 @@
   gap: 20px;
 }
 
-.question__section-two {
+.question__section__concentration {
   margin: 0 10px;
   padding-block-start: 50px;
   padding-inline-end: 0 ;
   padding-block-end: 50px;
 }
 
-.question__section-title-two {
+.question__section__title__concentration {
   min-inline-size: 355px;
 }
 
-.question__section-answer-two-container {
+.question__section__answer__concentration__container {
   display: flex;
   flex-direction: column;
 }
 
-.question__section__fhree {
+.question__section__goldfish {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
